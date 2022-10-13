@@ -6,8 +6,7 @@ export const state = () => ({
 
 // contains your actions
 export const actions = {
-    addComment ({ commit }, comment) {
-        console.log('action')
+  addComment ({ commit }, comment) {
     return new Promise((resolve, reject) => {
       axios.post('http://127.0.0.1:4000/comments', comment)
         .then((response) => {
@@ -21,7 +20,6 @@ export const actions = {
       axios.get('http://127.0.0.1:4000/comments')
         .then((response) => {
           resolve()
-          console.log(response.data)
           commit('updateComments', response.data)
         })
     })

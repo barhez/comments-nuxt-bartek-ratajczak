@@ -8,7 +8,7 @@
       </div>
       <div class="md:col-span-11 p-6 gob-comment">
         <h3>{{ commentData.author }}</h3>
-        <h5>{{  $moment(commentData.createdAt).fromNow() }}</h5>
+        <h5>{{ $moment(commentData.createdAt).fromNow() }}</h5>
         <p>{{ commentData.message }}</p>
         <div>
           <button>

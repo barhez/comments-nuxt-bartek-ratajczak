@@ -1,14 +1,14 @@
 <template>
   <div class="w-full">
     <h3 class="gon-comment-title mb-4">
-      Komentarze wspierających<span>40</span>
+      Komentarze wspierających<span>{{ comments.length }}</span>
     </h3>
     <Comment v-for="(commentData, index) in comments" :key=" index" :comment-data="commentData" />
   </div>
 </template>
 
 <script>
-import { mapGetters,mapActions} from 'vuex';
+import { mapGetters, mapActions } from 'vuex'
 import Comment from '@/components/Comments/Comment.vue'
 
 export default {
